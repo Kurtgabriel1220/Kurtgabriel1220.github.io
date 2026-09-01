@@ -26,6 +26,7 @@ header {
         border-radius: 12px;
         backdrop-filter: blur(20px);
     }
+}
 
 
 section{
@@ -40,19 +41,43 @@ section{
     background-size: cover;
     height: 100vh;
     background-position: center;
-    background-image: url("assets/maxresdefault.jpg");
-}
-
-/* text */
-.strongh1 {
+    background-image: url("assets/abstract.jpg")
     
 }
 
 
+/* text */
+.strongh1 {
+    color: #df3636;
+}
+
+.htmlcss {
+    font-size: 9vw;
+    text-align: center;
+    margin-top: 110px;
+    margin-bottom: 10px;
+    font-family: 'Archivo Black';
+    color: rgb(241, 241, 241);
+    mix-blend-mode: color-dodge;
+}
+
+h1:has(+ .ilustrationMorrison) {
+    margin-bottom: 14px;
+    color: #ffffff;
+}
+
+.conhecamjimmorrison {
+    font-size: 40px;
+    text-align: center;
+    
+    margin-top: 5px;
+    margin-bottom: 110px;
+}
+
 /* img */
 .img_card {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
 }
 
 .img_card2 {
@@ -88,7 +113,10 @@ section{
 }
 
 .ilustrationMorrison {
-    width: 1200;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
     height: 500px;
 }
 /* icon buttons */

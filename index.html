@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -22,9 +25,9 @@
         </nav>
     </header>
     <section class="section1">
-        <h2>HTML + CSS </h2>
+        <h class="htmlcss">HTML + CSS </h>
             <div>
-                <h1>Conheça <strong class="strongh1"> Jim Morrison</strong></h1>
+                <h1 class="conhecamjimmorrison">Conheça <strong class="strongh1"> Jim Morrison</strong></h1>
                 <img class="ilustrationMorrison" src="assets/lght my fire ed sulivan show 1967 hd remaster.png" >
                 <p>O grande vocalista do The Doors.</p>
                 <button>Ir para a discografria <img class="seta_botao" src="assets/images.png" ></button>
@@ -101,30 +104,46 @@ Pouco depois das gravações, Morrison deixou Los Angeles e foi para Paris. Ele 
 "Riders on the Storm" <br>permaneceu como o último lançamento do The Doors com Morrison e uma das músicas mais reconhecidas da banda.</p>
         </div>
         <!-- JavaScript para o definir padrao de volume do video -->
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const videos = document.querySelectorAll('video');
-        videos.forEach(function(video) {
-            video.volume = 0.6;
-        });
-        
 
-        // Defina aqui o tempo de início (em segundos) de cada vídeo pelo src
+        // Tempo de início (em segundos) de cada vídeo, pelo src
         const temposIniciais = {
             'videos/video2.mp4': 12,
             'videos/video3.mp4': 2,
             'videos/video4.mp4': 35
         };
 
-        for (const src in temposIniciais) {
-            const sourceEl = document.querySelector('video source[src="' + src + '"]');
-            if (sourceEl) {
-                const videoEl = sourceEl.parentElement;
-                videoEl.addEventListener('loadedmetadata', function() {
-                    videoEl.currentTime = temposIniciais[src];
+        videos.forEach(function(video) {
+            // Define o volume assim que os metadados carregam (mais confiável)
+            video.addEventListener('loadedmetadata', function() {
+                video.volume = 0.6;
+
+                const src = video.querySelector('source').getAttribute('src');
+                if (temposIniciais.hasOwnProperty(src)) {
+                    video.currentTime = temposIniciais[src];
+                }
+            });
+
+            // Garante o volume também caso o navegador tente resetar após o load
+            video.addEventListener('volumechange', function() {
+                if (video.dataset.volumeAjustado !== 'true') {
+                    video.dataset.volumeAjustado = 'true';
+                    video.volume = 0.6;
+                }
+            });
+
+            // Pausa os outros vídeos quando este começa a tocar
+            video.addEventListener('play', function() {
+                videos.forEach(function(outroVideo) {
+                    if (outroVideo !== video) {
+                        outroVideo.pause();
+                    }
                 });
-            }
-        }
+            });
+        });
     });
 </script>
     </section>
