@@ -35,16 +35,43 @@ section{
     flex-direction: column;
 }
 
+button {
+    font-family: 'poppins';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 1;
+}
+
 /* section */
 
 .section1{
     background-size: cover;
-    height: 100vh;
+    height: 150vh;
     background-position: center;
     background-image: url("assets/abstract.jpg")
     
 }
 
+.conteudoPrincipal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+
+    .buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 5px;
+    }
+}
 
 /* text */
 .strongh1 {
@@ -57,8 +84,15 @@ section{
     margin-top: 110px;
     margin-bottom: 10px;
     font-family: 'Archivo Black';
-    color: rgb(241, 241, 241);
+    color:  rgb(241, 241, 241);
     mix-blend-mode: color-dodge;
+}
+
+.description {
+    font-size: 33px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
 }
 
 h1:has(+ .ilustrationMorrison) {
@@ -72,6 +106,14 @@ h1:has(+ .ilustrationMorrison) {
     
     margin-top: 5px;
     margin-bottom: 110px;
+}
+
+.mynameG {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    opacity: 0.8;
 }
 
 /* img */
@@ -116,20 +158,23 @@ h1:has(+ .ilustrationMorrison) {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 900px;
-    height: 500px;
+    width: 90vh;
+    fixed: center;
 }
 /* icon buttons */
 
 .email_icon{
     height: 20px;
     width: 20px;
+    padding-left: 5px;
 }
 
 
 .seta_botao {
     height: 20px;
     width: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
 }
 
 /* Videos */
@@ -137,4 +182,57 @@ h1:has(+ .ilustrationMorrison) {
 .video {
     width: 600px;
     border-radius: 20px;
+}
+
+
+/* buttons */
+
+
+.botaoPrimario {
+    outline: none;
+    background-color: #333030d7;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+
+    img{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.botaoSecundario {
+    outline: none;
+    background-color: #ffffffe3;
+    color: #1d1935;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+
+    img{
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.discografia {
+    font-size: 52px;
+    margin-top: 10px;
+    margin-bottom: 110px;
+}
+
+.section2 {
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 50px;
 }
