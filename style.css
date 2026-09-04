@@ -1,14 +1,23 @@
+html {
+    scroll-behavior: smooth !important;
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+
 body {
     background-color: #1d1935;
     color: #e4dcdcef;
     font-family: 'poppins';
 }
+
+
 
 header {
     width: 100%;
@@ -52,11 +61,23 @@ button:hover {
     opacity: 1;
 }
 
+a{
+    color: white;
+    opacity: .7;
+    transition: all 0.3s;
+    text-decoration: none;
+
+    &:hover{
+        opacity: 1;
+    }
+}
+
 /* section */
 
 .section1{
-    background-size: cover;
-    height: 150vh;
+    margin-bottom: -10px;
+    background-size: cover; 
+    height: 140vh;
     background-position: center;
     background-image: url("assets/abstract.jpg")
     
@@ -77,6 +98,13 @@ button:hover {
 }
 
 /* text */
+
+
+
+.discografia {
+    text-align: center;
+}
+
 .strongh1 {
     color: #df3636;
 }
@@ -120,6 +148,7 @@ h1:has(+ .ilustrationMorrison) {
 }
 
 /* img */
+
 .img_card {
     width: 200px;
     height: 200px;
@@ -168,7 +197,7 @@ h1:has(+ .ilustrationMorrison) {
 
 .email_icon{
     height: 20px;
-    width: 20px;
+    width: 30px;
     padding-left: 5px;
 }
 
@@ -226,6 +255,7 @@ h1:has(+ .ilustrationMorrison) {
 .section2 {
     background-image: url("assets/redandblue.jpg");
     background-size: cover;
+    padding-bottom: 40px;
 }
 
 .discografia {
@@ -296,3 +326,138 @@ h1:has(+ .ilustrationMorrison) {
     font-weight: 400;
     color: rgba(255, 255, 255, 0.973);
 }
+
+/* Mais Sobre */
+
+.maisSobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 52px;
+    margin-top: 10px;
+    margin-bottom: 1px;
+}
+
+.musica-bloco {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: rgba(59, 58, 58, 0.2);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 25px;
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: rgba(36, 35, 35, 0.5);
+    }
+}
+.text_video1 {
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+
+.video1 {
+    margin: 25px;
+    width: 110vh;
+    position: right;
+}
+
+.text1 {
+    margin-top: 10px;
+    font-size: 25px;
+}
+.text_video2 {
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+
+.video2 {
+    margin: 25px;
+    width: 110vh;
+    position: right;
+}
+
+.text2 {
+    margin-top: 10px;
+    font-size: 25px;
+}
+.text_video3 {
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+
+.video3 {
+    margin: 25px;
+    width: 110vh;
+    position: right;
+}
+
+.text3 {
+    margin-top: 10px;
+    font-size: 25px;
+}
+.text_video4 {
+    margin-bottom: px;
+    font-size: 50px;
+}
+
+.video4 {
+    margin: 25px;
+    width: 110vh;
+    position: right;
+}
+
+.text4 {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+
+.musica-bloco {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "titulo titulo"
+        "video texto";
+    gap: 20px 40px;
+    /* r    esto dos seus estilos atuais (padding, background, etc) continuam aqui */
+}
+
+.musica-bloco h2 {
+    grid-area: titulo;
+}
+
+.musica-bloco video {
+    grid-area: video;
+}
+
+.musica-bloco p {
+    grid-area: texto;
+}
+
+.musicBlock2
+.musiscBlock4 {
+    grid-template-areas:
+        "titulo titulo"
+        "texto video"
+}
+
+/* Footer */
+
+.footer-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    padding: 20px 0;
+}
+
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 0px 0;
+    text-align: center;
+}
+

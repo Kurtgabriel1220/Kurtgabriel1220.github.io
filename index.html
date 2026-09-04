@@ -18,13 +18,13 @@
         <img class="profilePhoto" src="assets/Pink_Floyd_-_Meddle.jpg" alt="Foto de perfil provisoria">
         <nav>
             <ul>
-            <li>Inicio</li>
-            <li>Discografia</li>
-            <li>Sobre</li>
+            <li><a href="#Inicio">Inicio</a></li>
+            <li><a href="#Discografia">Discografia</a></li>
+            <li><a href="#MaisSobre">Sobre</a></li>
         </ul>
         </nav>
     </header>
-    <section class="section1">
+    <section class="section1" id="Inicio" >
         <h class="htmlcss">HTML + CSS </h>
             <div class="conteudoPrincipal">
                 <h1 class="conhecamjimmorrison">Conheça <strong class="strongh1"> Jim Morrison</strong></h1>
@@ -32,12 +32,12 @@
                 <h2 class="description">O grande vocalista do The Doors.</h2>
                 <p class="mynameG">Feito por: Gabriel C Costa</p>
                 <div class="buttons">
-                <button class="botaoPrimario">Ir para a discografria <img class="seta_botao" src="assets/botao-circular-preto-de-seta-para-baixo.png" ></button>
-                <button class="botaoSecundario">Entrar em contato <img class="email_icon" src="assets/envelope-regular-full.svg"> </button>
+                <button class="botaoPrimario"><a href="#Discografia">Ir para a discografria </a> <img class="seta_botao" src="assets/botao-circular-preto-de-seta-para-baixo.png" ></button>
+                <a class="botaoSecundario" target="_blank" href="./Entreemcontato/contato.html">Entre em contato <img class="email_icon" src="assets/envelope-regular-full.svg"> </a>
                 </div>
             </div>
     </section>
-    <section class="section2">
+    <div class="section2" id="Discografia">
         <h1 class="discografia">Discografia do The Doors</h1>
         <div class="divCards">
             <div class="card card1">
@@ -72,42 +72,50 @@
             </div>
         </div>
         <!-- Mais sobre -->
-        <div>
-            <h1>Mais sobre</h1>
-            <h2 class="text_video1">The Doors - Light My Fire - Ed Sullivan Show 1967</h2>
-            <video class="video" controls>
-                <source src="videos/video1.mp4" type="video/mp4">
-            </video>
-            <p>O primeiro hit de grande sucesso da banda foi "Light My Fire". Escrita pelo o guitarrista Robby Krieger. <br>Lançado em 1967 no álbum de estreia da banda, Auto intutulado "The Doors" <br> Uma grande curiosidade dessa apresentação no Ed Sullivan Show, É que Sullivan pediu aos <br>membros da banda para nao cantaram uma frase de um verso "higher", Jim Morrison ignora <br> e no tempo 0:26 podemos ver o guitarrista sorrindo, logo após o show eles foram expuslos do Ed Sulliva Show.</p>
-            <h2 class="text_video2">The Doors - People Are Strange - Ed Sullivan Show 1967</h2>
-            <video class="video" controls>
-                <source src="videos/video2.mp4" type="video/mp4">
-            </video>
-            <p>Uma das músicas mais marcantes de Strange Days."People Are Strange" foi escrita por Jim Morrison e Robby Krieger <br> e lançada em 1967 no segundo álbum da banda, Strange Days.A música nasceu durante um período difícil para Morrison. <br>Segundo Krieger, os dois estavam caminhando pelo Laurel Canyon, em Los Angeles, quando Morrison estava deprimido <br>e comentou que tudo parecia estranho. A experiência acabou servindo de inspiração para a música.A letra fala sobre alienação, <br> solidão e a sensação de enxergar o mundo de uma maneira diferente. O verso "People are strange when you're a stranger" <br>resume justamente essa sensação de não pertencer. Uma curiosidade é que a música se tornou uma das primeiras <br> grandes demonstrações da capacidade do The Doors de transformar experiências pessoais de Morrison em algo universal.</p>
-            <h2 class="text_video3">The Doors - Roadhouse Blues 1970</h2>
-            <video class="video" controls>
-                <source src="videos/video3.mp4" type="video/mp4">
-            </video>
-            <p>Um dos maiores mergulhos do The Doors no blues.
-"Roadhouse Blues" foi lançada em 1970 no álbum Morrison Hotel <br> e mostra a banda deixando um pouco de lado a psicodelia dos primeiros trabalhos para explorar suas raízes no blues e no rock'n'roll. <br>
-A música foi escrita principalmente por Jim Morrison, com contribuições de Robby Krieger. Sua gravação contou ainda com músicos <br> convidados, incluindo o guitarrista Lonnie Mack e o baixista Ray Neapolitan.
-Um dos elementos mais marcantes é o riff de guitarra <br> de Krieger, acompanhado pelo piano e pela gaita, criando uma sonoridade que lembra uma apresentação de blues em um bar.
-A frase <br> "The future's uncertain and the end is always near" se tornou uma das linhas mais lembradas de Morrison, refletindo a atmosfera de <br>liberdade e imprevisibilidade que caracteriza a música.
-O título faz referência a um roadhouse, um tipo de estabelecimento localizado <br> próximo a estradas, normalmente associado a bares e música ao vivo.</p>
-            <h2 class="text_video4">The Doors — Riders on the Storm — 1971</h2>
-            <video class="video" controls>
-            <source src="videos/video4.mp4" type="video/mp4">
-            </video>
-            <p>A última viagem do The Doors com Jim Morrison.
-"Riders on the Storm" foi lançada em 1971 no álbum L.A. Woman e acabou se tornando <br> a última música gravada pelo o The Doors com Jim Morrison.
-A música surgiu a partir de uma improvisação inspirada em "Ghost Riders in the Sky", <br> de Stan Jones. A banda transformou a ideia em uma composição atmosférica, marcada pelo piano elétrico de Ray Manzarek,<br> pela guitarra de Robby Krieger e pelos efeitos de chuva e trovões.
-Morrison gravou sua voz em duas camadas, uma principal e <br>outra muito mais baixa, quase como um sussurro, criando a sensação de que existe uma segunda voz dentro da música.
-A letra apresenta imagens <br> de tempestades, estradas e um misterioso "assassino na estrada". Essa atmosfera sombria fez da música uma espécie de despedida involuntária. <br>
-Pouco depois das gravações, Morrison deixou Los Angeles e foi para Paris. Ele morreu em 3 de julho de 1971, aos 27 anos.
-"Riders on the Storm" <br>permaneceu como o último lançamento do The Doors com Morrison e uma das músicas mais reconhecidas da banda.</p>
-        </div>
-        <!-- JavaScript para o definir padrao de volume do video -->
-
+        <div id="MaisSobre">
+            <h1 class="maisSobre">Mais sobre</h1>
+                <div class="musicBlock1 musica-bloco">
+                    <h2 class="text_video1">The Doors - Light My Fire - Ed Sullivan Show 1967</h2>
+                    <video class="video1" controls>
+                        <source src="videos/video1.mp4" type="video/mp4">
+                    </video>
+                    <p class="text1">O primeiro hit de grande sucesso da banda foi "Light My Fire". Escrita pelo o guitarrista Robby Krieger. <br>Lançado em 1967 no álbum de estreia da banda, Auto intutulado "The Doors" <br> Uma grande curiosidade dessa apresentação no Ed Sullivan Show, É que Sullivan pediu aos <br>membros da banda para nao cantaram uma frase de um verso "higher", Jim Morrison ignora <br> e no tempo 0:26 podemos ver o guitarrista sorrindo, logo após o show eles foram expuslos do Ed Sulliva Show.</p>
+            </div>
+            <div class="musicBlock2 musica-bloco">
+                <h2 class="text_video2">The Doors - People Are Strange - Ed Sullivan Show 1967</h2>
+                <video class="video2" controls>
+                    <source src="videos/video2.mp4" type="video/mp4">
+                </video>
+                <p class="text2">Uma das músicas mais marcantes de Strange Days."People Are Strange" foi escrita por Jim Morrison e Robby Krieger <br> e lançada em 1967 no segundo álbum da banda, Strange Days.A música nasceu durante um período difícil para Morrison. <br>Segundo Krieger, os dois estavam caminhando pelo Laurel Canyon, em Los Angeles, quando Morrison estava deprimido <br>e comentou que tudo parecia estranho. A experiência acabou servindo de inspiração para a música.A letra fala sobre alienação, <br> solidão e a sensação de enxergar o mundo de uma maneira diferente. O verso "People are strange when you're a stranger" <br>resume justamente essa sensação de não pertencer. Uma curiosidade é que a música se tornou uma das primeiras <br> grandes demonstrações da capacidade do The Doors de transformar experiências pessoais de Morrison em algo universal.</p>
+            </div>
+            <div class="musicBlock3 musica-bloco">
+                <h2 class="text_video3">The Doors - Roadhouse Blues 1970</h2>
+                <video class="video3" controls>
+                    <source src="videos/video3.mp4" type="video/mp4">
+                </video>
+                <p class="text3">Um dos maiores mergulhos do The Doors no blues.
+                    "Roadhouse Blues" foi lançada em 1970 no álbum Morrison Hotel <br> e mostra a banda deixando um pouco de lado a psicodelia dos primeiros trabalhos para explorar suas raízes no blues e no rock'n'roll.
+                    A música foi escrita principalmente por Jim Morrison, com contribuições de Robby Krieger. Sua gravação contou ainda com músicos convidados, incluindo o guitarrista Lonnie Mack e o baixista Ray Neapolitan.
+                    Um dos elementos mais marcantes é o riff de guitarra de Krieger, acompanhado pelo piano e pela gaita, criando uma sonoridade que lembra uma apresentação de blues em um bar.
+                    A frase "The future's uncertain and the end is always near" se tornou uma das linhas mais lembradas de Morrison, refletindo a atmosfera de liberdade e imprevisibilidade que caracteriza a música.
+                    O título faz referência a um roadhouse, um tipo de estabelecimento localizado próximo a estradas, normalmente associado a bares e música ao vivo.</p>
+                </div>
+                <div class="musicBlock4 musica-bloco">
+                    <h2 class="text_video4">The Doors — Riders on the Storm — 1971</h2>
+                    <video class="video4" controls>
+                        <source src="videos/video4.mp4" type="video/mp4">
+                    </video>
+                    <p class="text4">A última viagem do The Doors com Jim Morrison.
+                        "Riders on the Storm" foi lançada em 1971 no álbum L.A. Woman e acabou se tornando a última música gravada pelo o The Doors com Jim Morrison.
+                        A música surgiu a partir de uma improvisação inspirada em "Ghost Riders in the Sky", de Stan Jones. A banda transformou a ideia em uma composição atmosférica, marcada pelo piano elétrico de Ray Manzarek, pela guitarra de Robby Krieger e pelos efeitos de chuva e trovões.
+                        Morrison gravou sua voz em duas camadas, uma principal e outra muito mais baixa, quase como um sussurro, criando a sensação de que existe uma segunda voz dentro da música.
+                        A letra apresenta imagens de tempestades, estradas e um misterioso "assassino na estrada". Essa atmosfera sombria fez da música uma espécie de despedida involuntária. 
+                        Pouco depois das gravações, Morrison deixou Los Angeles e foi para Paris. Ele morreu em 3 de julho de 1971, aos 27 anos.
+                        "Riders on the Storm" permaneceu como o último lançamento do The Doors com Morrison e uma das músicas mais reconhecidas da banda.</p>
+                </div>
+            </div>
+    </div>
+<!-- JavaScrip t para o definir padrao de volume do video -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const videos = document.querySelectorAll('video');
@@ -149,6 +157,15 @@ Pouco depois das gravações, Morrison deixou Los Angeles e foi para Paris. Ele 
         });
     });
 </script>
-    </section>
+<section class="footer-section">
+<footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <h1> Feito por: <strong>Gabriel C Costa</strong> </h1>
+                <span>kurtgabriel1220@gmail.com</span>
+            </div>
+        </div>
+    </footer>
+    
 </body>
 </html>
